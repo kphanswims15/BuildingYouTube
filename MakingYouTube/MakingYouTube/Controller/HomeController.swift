@@ -15,7 +15,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         navigationItem.title = "Home"
         navigationController?.navigationBar.isTranslucent = false
-        
+         
         let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 32, height: view.frame.height))
         navigationItem.titleView = titleLabel
         titleLabel.text = "Home"
@@ -26,6 +26,9 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView?.backgroundColor = UIColor.white
         
         collectionView?.register(VideoCell.self, forCellWithReuseIdentifier: "cellId")
+        
+        collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
+        collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 0, 0)
         
         setupMenuBar()
     }
