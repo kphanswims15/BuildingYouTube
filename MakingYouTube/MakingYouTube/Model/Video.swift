@@ -11,6 +11,8 @@ import UIKit
 class Video: NSObject {
     var thumbnailImageName: String?
     var title: String?
+    var numberOfViews: NSNumber?
+    var uploadDate: Date?
     
     var channel: Channel?
 }
